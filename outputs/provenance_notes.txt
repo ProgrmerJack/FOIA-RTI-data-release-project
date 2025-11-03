@@ -1,0 +1,21 @@
+SAM Exclusions download:
+- Source: https://open.gsa.gov/api/sam/
+- File: samexclusionspublicextract-gsa-1626.csv (retrieved 2 Nov 2025)
+- Notes: records cover 1997-02-03 through 2020-12-21; fields trimmed to vendor identifier metadata.
+
+Uzbekistan procurement extracts:
+- Portal: https://data.egov.uz (Open Data Licence: free use)
+- Dataset IDs: 1-012-0011, 3-001-0006, 3-011-0001, 3-033-0006, 4-069-0005, 5-001-0015 (downloaded 2 Nov 2025)
+- Notes: XLSX-like CSV files (Excel content) cleaned via build_dataset.py; monetary values in UZS.
+
+Processing steps (build_dataset.py):
+1. Load US SAM CSV, assemble vendor name string, map identifiers and notes, fallback to Creation_Date where Active Date missing.
+2. Iterate Uzbekistan sheets (read via openpyxl when available, else CSV), detect supplier/amount/date columns heuristically, standardise fields.
+3. Concatenate, strip whitespace, drop duplicates, sort by country/type/vendor/date/id.
+4. Export harmonised dataset (`foia_vendor_risk_dataset.csv`) and codebook (`foia_vendor_risk_codebook.csv`).
+
+Recommended Zenodo attachments:
+- foia_vendor_risk_dataset.csv (or gzip).
+- foia_vendor_risk_codebook.csv.
+- README.md (context + instructions).
+- This provenance_notes.txt (optional supplemental file).

@@ -1,0 +1,12 @@
+column,description
+country,Country or sovereign body that published the record.
+record_type,Either 'exclusion' from SAM (USA) or 'contract_award' from Uzbekistan procurement extracts.
+record_source,Human-readable citation of the original publication channel.
+vendor_name,Primary organization or individual name as published.
+government_identifier,Unique identifier or tax ID provided by the source (DUNS/STIR).
+record_id,SAM Number for exclusions or contract number/lot reference for awards.
+record_date,Published effective date (Active Date for exclusions; contract signature date for awards) formatted as YYYY-MM-DD where available.
+value,Monetary value when provided (contract amount in Uzbek soum).
+currency,ISO or literal currency string as published.
+notes,Concatenated contextual metadata (agency, program, purchase type, etc.).
+source_url,Landing page for the originating dataset or API.
