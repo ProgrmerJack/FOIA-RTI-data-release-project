@@ -1,6 +1,14 @@
-# FOIA / RTI “Already-Released” Republisher
+# FOIA / RTI "Already-Released" Republisher
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.17792138.svg)](https://doi.org/10.5281/zenodo.17792138)
 
 This workspace assembles procurement-risk records already released by U.S. and Uzbek authorities, normalises them, and packages the result for Zenodo distribution (dataset + codebook).
+
+## Data Availability
+
+**Zenodo Archive:** [10.5281/zenodo.17792138](https://doi.org/10.5281/zenodo.17792138)
+
+All processed data, codebook, and analysis scripts are archived for reproducibility.
 
 ## Source holdings
 
